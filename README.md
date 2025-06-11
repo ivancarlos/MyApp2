@@ -7,6 +7,7 @@ recursos e uma `MainActivity`.
 
 ## 📁 Estrutura do Projeto
 
+```{bash}
 .
 ├── AndroidManifest.xml
 ├── build.xml
@@ -14,6 +15,7 @@ recursos e uma `MainActivity`.
 ├── res/ # Recursos do app (layouts, strings, ícones)
 ├── src/ # Código-fonte Java
 └── ...
+```
 
 
 ## 🚀 Funcionalidades
@@ -42,10 +44,14 @@ recursos e uma `MainActivity`.
 
 ```bash
 # Para compilar o projeto
+```{bash}
 ant debug
+```
 
 # Para gerar o APK
+```{bash}
 ant release
+```
 O APK será gerado na pasta bin/.
 
 ⚠️ Este projeto utiliza um sistema legado de build. Para
@@ -56,7 +62,9 @@ com Gradle.
 Após gerar o APK (bin/MyApp2-release.apk), instale em um
 dispositivo ou emulador Android com:
 
+```{bash}
 adb install -r bin/MyApp2-release.apk
+```
 🤝 Contribuindo
 Contribuições são bem-vindas! Para contribuir:
 
