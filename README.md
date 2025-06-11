@@ -42,8 +42,8 @@ recursos e uma `MainActivity`.
 
 ### Passos
 
-```bash
 # Para compilar o projeto
+
 ```{bash}
 ant debug
 ```
