@@ -23,7 +23,11 @@ build:
 	ant debug
 release:
 	ant release
-install:
+
+install: installd
+installr:
+	ant installr
+installd:
 	ant installd
 uninstall:
 	adb uninstall `xmlstarlet select -T -t -v "//manifest/@package" -n AndroidManifest.xml`
