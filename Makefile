@@ -1,4 +1,4 @@
-KEYSTORE_FILE = meu-release-key.keystore
+KEYSTORE_FILE = .keystore/meu-release-key.keystore
 ALIAS         = minha-chave
 KEYSTORE_PASS = senha123
 KEY_PASS      = senha123
@@ -21,6 +21,8 @@ KEYTOOL_OPT   = -genkeypair \
 
 build:
 	ant debug
+release:
+	ant release
 install:
 	ant installd
 uninstall:
@@ -28,8 +30,9 @@ uninstall:
 start:
 	adb shell am start -n `xmlstarlet select -T -t -v "//manifest/@package" -n AndroidManifest.xml`/`xmlstarlet select -T -t -v "//manifest/@package" -n AndroidManifest.xml`.`xmlstarlet select -T -t -v "//application/activity/@android:name" -n AndroidManifest.xml`
 clean:
-	rm $(KEYSTORE_FILE)
+	rm -rf .keystore
 	ant clean
 key:
+	mkdir .keystore
 	keytool  $(KEYTOOL_OPT)
 
